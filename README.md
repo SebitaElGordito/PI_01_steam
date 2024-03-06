@@ -98,7 +98,7 @@ Uno de los pedidos para este proyecto fue aplicar un análisis de sentimiento a 
 <br>
 
 <p align="center">
-<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/sentiment_analysis.jpeg?raw=true" alt="imagen de creación de columna sentiment analysis" width="650" height="420">
+<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/sentiment_analysis.png?raw=true" alt="imagen de creación de columna sentiment analysis" width="500" height="550">
 </p>
 <p align="center">
 <i>creación de la columna sentiment analysis en jupiter notebook.</i>
