@@ -14,7 +14,7 @@
 <br>
 
 <p align="center">
-<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/steam_banner_trabajo.jpg?raw=true" alt="steam banner" width="800" height="270">
+<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/steam_banner_trabajo.jpg?raw=true" alt="steam banner" width="900" height="250">
 
 <br>
 
@@ -149,7 +149,7 @@ El modelo tiene una relación ítem-ítem. Se toma un juego y en base a que tan 
 <br>
 
 <p align="center">
-<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/modelo_recomendacion.png?raw=true" alt="imagen de función modelo de recomendacón" width="700" height="450">
+<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/modelo_recomendacion.png?raw=true" alt="imagen de función modelo de recomendacón" width="700" height="380">
 </p>
 <p align="center">
 <i>Función de modelo de recomendación.</i>
@@ -158,3 +158,49 @@ El modelo tiene una relación ítem-ítem. Se toma un juego y en base a que tan 
 <br>
 
 La **similitud del coseno** que es una medida comúnmente utilizada para evaluar la similitud entre dos vectores en un espacio multidimensional. En el contexto de sistemas de recomendación y análisis de datos, la similitud del coseno se utiliza para determinar cuán similares son dos conjuntos de datos o elementos, y se calcula utilizando el coseno del ángulo entre los vectores que representan esos datos o elementos.
+
+<br>
+
+## Desarrollo de API
+
+Para el desarrolo de la API se decidió utilizar el framework FastAPI, creando las siguientes funciones:
+
+* **developer**: Esta función recibe como parámetro 'developer', que es la empresa desarrolladora del juego, y devuelve la cantidad de items que desarrolla dicha empresa y el porcentaje de contenido Free por año por sobre el total que desarrolla.
+
+* **user_data**: Esta función tiene por parámentro 'user_id' y devulve la cantidad de dinero gastado por el usuario, el porcentaje de recomendaciones que realizó sobre la cantidad de reviews que se analizan y la cantidad de items que posee en su biblioteca de juegos.
+
+* **user_for_genre**: Esta función recibe como parámetro el género de un videojuego y devuelve el usuario con más horas de juego en el género ingresado, y una lista de acumulación de horas jugadas por año.
+
+* **best_developer_year**: En esta función se ingresa un año como parámetro y devuelve el top 3 de desarrolladoras con mas recomendaciones positivas por usuarios, para ese año dado.
+
+* **developer_review_analysis**: Esta función recibe como parámetro una desarrolladora y devuelve un diccionario con la cantidad de reviews positivas y reviews negativas hechas por los usuarios, para esa desarrolladora.
+
+* **recomendacion_juego**: Esta función recibe como parámetro el id de un juego y devuelve una lista con 5 juegos recomendados similares al ingresado.
+
+<br>
+
+<p align="center">
+<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/fastapi.png?raw=true" alt="imagen de funciones en fastapi local" width="700" height="380">
+</p>
+<p align="center">
+<i>Funciones en fastAPI local.</i>
+</p>
+
+<br>
+
+El desarrollo de las funciones de consultas generales se puede ver en: [main.py](https://github.com/SebitaElGordito/PI_01_steam/blob/main/main.py).
+
+<br>
+
+## Deployment
+
+Para el deploy de la API se decidió crear un nuevo repositorio [repo_render](https://github.com/SebitaElGordito/PI_render). que contara solo con las unciones a consumir en la API, liberandonos de las carpetas o jupiters notebooks innecesarios. Se seleccionó la plataforma Render que es una nube unificada para crear y ejecutar aplicaciones y sitios web, permitiendo el despliegue automático desde GitHub. Se utilizó un Dockerfile cuya imagen es Python 3.10. Esto se hace porque Render usa por defecto Python 3.7, lo que no es compatible con las versiones de las librerías trabajadas en este proyecto, por tal motivo, se optó por deployar el proyecto dentro de este contenedor. Se puede ver el detalle del documento [Dockerfile](https://github.com/SebitaElGordito/PI_render/blob/main/Dockerfile).
+- Se generó un servicio nuevo  en `render.com`, conectado al presente repositorio y utilizando Docker como Runtime.
+- Finalmente, el servicio queda corriendo en [https://pi-render-tt44.onrender.com/](https://pi-render-tt44.onrender.com/).
+
+
+
+## Video
+
+En este [video](https://www.youtube.com/watch?v=MWNqfuX1hUQ) se explica brevemente este proyecto mostrando el funcionamiento de la API en render y en fastApi local.
+
