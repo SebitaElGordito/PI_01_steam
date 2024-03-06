@@ -14,7 +14,7 @@
 <br>
 
 <p align="center">
-<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/steam_banner_trabajo.jpg?raw=true" alt="steam banner" width="800" height="350">
+<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/steam_banner_trabajo.jpg?raw=true" alt="steam banner" width="800" height="270">
 
 <br>
 
@@ -104,7 +104,7 @@ Uno de los pedidos para este proyecto fue aplicar un análisis de sentimiento a 
 <br>
 
 <p align="center">
-<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/sentiment_analysis.png?raw=true" alt="imagen de creación de columna sentiment analysis" width="750" height="550">
+<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/sentiment_analysis.png?raw=true" alt="imagen de creación de columna sentiment analysis" width="750" height="500">
 </p>
 <p align="center">
 <i>creación de la columna sentiment analysis en jupiter notebook.</i>
@@ -125,7 +125,7 @@ Se realizó el EDA a los tres conjuntos de datos sometidos a ETL con el objetivo
 <br>
 
 <p align="center">
-<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/grafico_eda.jpg?raw=true" alt="imagen de gráfico en el EDA" width="800" height="400">
+<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/grafico_eda.png?raw=true" alt="imagen de gráfico en el EDA" width="800" height="400">
 </p>
 <p align="center">
 <i>Gráfico de barras cantidad de juegos lanzados por año.</i>
@@ -137,3 +137,24 @@ En particular para el modelo de recomendación, se terminó eligiendo construir 
 
 El desarrollo de este análisis se encuentra en: 
 + [EDA](https://github.com/SebitaElGordito/PI_01_steam/blob/main/EDA/EDA.ipynb)
+
+<br>
+
+## :robot: Modelo de recomendación
+
+Se creaó el modelo de recomendación, que generan una lista de 5 juegos ingresando el id_producto.
+
+El modelo tiene una relación ítem-ítem. Se toma un juego y en base a que tan similar es ese juego con el resto de los juegos se recomiendan similares. Para ello, se aplicaron filtro previos a aplicar la **similitud del coseno**, tales como que los juegos potencialmente recomendados debían compartir al menos una categoría de genero con el item_id ingresado para la consulta. Esto generaba una lista de 10 productos recomendados, luego de aplicar el filtro de género y la similitud del coseno, lista de la cual se seleccionaban los 5 juegos con mayor porcentaje de recomendación por el usuario.
+
+<br>
+
+<p align="center">
+<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/modelo_recomendacion.png?raw=true" alt="imagen de función modelo de recomendacón" width="700" height="450">
+</p>
+<p align="center">
+<i>Función de modelo de recomendación.</i>
+</p>
+
+<br>
+
+La **similitud del coseno** que es una medida comúnmente utilizada para evaluar la similitud entre dos vectores en un espacio multidimensional. En el contexto de sistemas de recomendación y análisis de datos, la similitud del coseno se utiliza para determinar cuán similares son dos conjuntos de datos o elementos, y se calcula utilizando el coseno del ángulo entre los vectores que representan esos datos o elementos.
