@@ -211,32 +211,32 @@ def home():
     return presentacion()
 
 
-@app.get(path = '/developer')
-def developer(desarrollador: str):
+@app.get(path = '/develop')
+def develop(desarrollador: str):
     return developer(desarrollador)
 
 
-@app.get('/user_data')
-def user_data(usuario: str):
+@app.get('/userdata')
+def userdata(usuario: str):
     return user_data(usuario)
     
 
-@app.get(path = '/user_for_genre')
-def user_for_genre(genero: str):
+@app.get(path = '/userforgenre')
+def userforgenre(genero: str):
     return user_for_genre(genero)
 
     
-@app.get(path = '/best_developer_year')
-def best_developer_year(year: int):
+@app.get(path = '/bestdeveloperyear')
+def bestdeveloperyear(year: int):
     return best_developer_year(year)
 
 
-@app.get('/developer_reviews_analisis')
-def developer_reviews_analysis(developer: str):
+@app.get('/developerreviewsanalisis')
+def developerreviewsanalysis(developer: str):
     return developer_reviews_analysis(developer)
 
 
-@app.get('/recomendacion_juego')
-def recomendacion_juego(id_producto: int):
+@app.get('/recomendacionjuego')
+def recomendacionjuego(id_producto: int):
     return recomendacion_juego(id_producto)
 
