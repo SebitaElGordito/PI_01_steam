@@ -14,7 +14,7 @@
 <br>
 
 <p align="center">
-<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/steam_banner_trabajo.jpeg?raw=true" alt="steam banner" width="800" height="350">
+<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/steam_banner_trabajo.jpg?raw=true" alt="steam banner" width="800" height="350">
 
 <br>
 
@@ -104,7 +104,7 @@ Uno de los pedidos para este proyecto fue aplicar un análisis de sentimiento a 
 <br>
 
 <p align="center">
-<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/sentiment_analysis.png?raw=true" alt="imagen de creación de columna sentiment analysis" width="700" height="550">
+<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/sentiment_analysis.png?raw=true" alt="imagen de creación de columna sentiment analysis" width="750" height="550">
 </p>
 <p align="center">
 <i>creación de la columna sentiment analysis en jupiter notebook.</i>
@@ -115,3 +115,25 @@ Uno de los pedidos para este proyecto fue aplicar un análisis de sentimiento a 
 Para la creación de esta columna, se utilizó la librería nltk que es la abreviatura de Natural Language Toolkit, una biblioteca para Python que se utiliza para trabajar con datos de lenguaje humano y análisis de sentimiento. VADER es una herramienta de análisis de sentimientos basada en un léxico y reglas, especialmente calibrada para entender los sentimientos expresados en las redes sociales. Utiliza un conjunto de palabras etiquetadas según su orientación semántica como positivas o negativas y aplica una serie de reglas gramaticales y sintácticas para estimar la valencia sentimental de un texto.
 
 Por otra parte, y bajo el mismo criterio de optimizar los tiempos de respuesta de las consultas en la API y teniendo en cuenta las limitaciones de almacenamiento en el servicio de nube para deployar la API, se realizaron dataframes auxiliares para cada una de las funciones solicitadas. En el mismo sentido, se guardaron estos dataframes en formato *parquet* que permite una compresión y codificación eficiente de los datos.
+
+<br>
+
+## :bar_chart: EDA
+
+Se realizó el EDA a los tres conjuntos de datos sometidos a ETL con el objetivo de identificar las variables que se pueden utilizar en la creación del modelo de recmendación. Para ello se utilizó la librería Pandas para la manipulación de los datos y las librerías Matplotlib y Seaborn para la visualización.
+
+<br>
+
+<p align="center">
+<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/grafico_eda.jpg?raw=true" alt="imagen de gráfico en el EDA" width="800" height="400">
+</p>
+<p align="center">
+<i>Gráfico de barras cantidad de juegos lanzados por año.</i>
+</p>
+
+<br>
+
+En particular para el modelo de recomendación, se terminó eligiendo construir un dataframe específico con el id del usuario que realizaron reviews y los nombres de los juegos a los cuales se le realizaron comentarios.
+
+El desarrollo de este análisis se encuentra en: 
++ [EDA](https://github.com/SebitaElGordito/PI_01_steam/blob/main/EDA/EDA.ipynb)
