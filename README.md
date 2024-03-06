@@ -7,8 +7,14 @@
 ![Seaborn](https://img.shields.io/badge/-Seaborn-333333?style=flat&logo=seaborn)
 ![Scikit-learn](https://img.shields.io/badge/-Scikitlearn-333333?style=flat&logo=scikitlearn)
 
+<br>
+
 # :construction: Proyecto Integrador 01 steam :construction:
 
+<br>
+
+<p align="center">
+<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/steam_banner_trabajo.jpeg?raw=true" alt="steam banner" width="800" height="350">
 
 <br>
 
@@ -98,7 +104,7 @@ Uno de los pedidos para este proyecto fue aplicar un análisis de sentimiento a 
 <br>
 
 <p align="center">
-<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/sentiment_analysis.png?raw=true" alt="imagen de creación de columna sentiment analysis" width="500" height="550">
+<img src="https://github.com/SebitaElGordito/PI_01_steam/blob/main/Images/sentiment_analysis.png?raw=true" alt="imagen de creación de columna sentiment analysis" width="700" height="550">
 </p>
 <p align="center">
 <i>creación de la columna sentiment analysis en jupiter notebook.</i>
