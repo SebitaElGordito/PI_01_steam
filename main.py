@@ -5,46 +5,6 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Se instancia la aplicación
-app = FastAPI()
-
-# Funciones
-@app.get(path="/", 
-         response_class=HTMLResponse,
-         tags=["Home"])
-def home():
-    return presentacion()
-
-
-@app.get(path = '/developer')
-def developer(desarrollador: str):
-    return developer(desarrollador)
-
-
-@app.get('/user_data')
-def user_data(usuario: str):
-    return user_data(usuario)
-    
-
-@app.get(path = '/user_for_genre')
-def user_for_genre(genero: str):
-    return user_for_genre(genero)
-
-    
-@app.get(path = '/best_developer_year')
-def best_developer_year(year: int):
-    return best_developer_year(year)
-
-
-@app.get('/developer_reviews_analisis')
-def developer_reviews_analysis(developer: str):
-    return developer_reviews_analysis(developer)
-
-
-@app.get('/recomendacion_juego')
-def recomendacion_juego(id_producto: int):
-    return recomendacion_juego(id_producto)
-
 df_developer = pd.read_parquet('Datasets/def_developer.parquet')
 df_user_data_final = pd.read_parquet('Datasets/def_user_data.parquet')
 df_user_genre = pd.read_parquet('Datasets/def_user_for_genre.parquet')
@@ -238,3 +198,45 @@ def recomendacion_juego(id_producto):
     juegos_recomendados_dict['Debido a que te gustó ' + juego_filtrado['title'].iloc[0] + ', también podría interesarte...'] = top_juegos_recomendados[['title']].to_dict(orient='records')
 
     return juegos_recomendados_dict
+
+
+# Se instancia la aplicación
+app = FastAPI()
+
+# Funciones
+@app.get(path="/", 
+         response_class=HTMLResponse,
+         tags=["Home"])
+def home():
+    return presentacion()
+
+
+@app.get(path = '/developer')
+def developer(desarrollador: str):
+    return developer(desarrollador)
+
+
+@app.get('/user_data')
+def user_data(usuario: str):
+    return user_data(usuario)
+    
+
+@app.get(path = '/user_for_genre')
+def user_for_genre(genero: str):
+    return user_for_genre(genero)
+
+    
+@app.get(path = '/best_developer_year')
+def best_developer_year(year: int):
+    return best_developer_year(year)
+
+
+@app.get('/developer_reviews_analisis')
+def developer_reviews_analysis(developer: str):
+    return developer_reviews_analysis(developer)
+
+
+@app.get('/recomendacion_juego')
+def recomendacion_juego(id_producto: int):
+    return recomendacion_juego(id_producto)
+
