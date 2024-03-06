@@ -20,42 +20,23 @@
 
 ## Índice
 
-* [Contexto](#contexto)
+* [Contexto](#hammer-contexto)
 
-+ [Creación y conexión de la máquina virtual](#hammer-creación-y-conexión-de-la-máquina-virtual-entorno-linux)
+* [Datos](#memo-datos)
 
-  * [Limpieza de la máquina virtual (opcional)](#limpieza-de-la-máquina-virtual-opcional)
+* [ETL](#etl)
 
-* [Clonación del Repositorio](#calling-clonación-del-repositorio-inicio-y-ejecución-de-los-servicios-docker-composeyml)
+* [Feature engineering](#feature-engineering)
 
-* [HDFS](#floppy_disk-hdfs---hadoop-distributed-file-system)
+* [EDA](#bar_chart-eda)
 
-* [Hive](#bookmark_tabs-hive)
+* [Modelo de Recomendación](#robot-modelo-de-recomendación)
 
-* [Formatos de Almacenamiento](#file_cabinet-formatos-de-almacenamiento)
+* [Desarrollo de API](#desarrollo-de-api)
 
-* [SQL](#computer-sql)
+* [Deployment](#deployment)
 
-+ [No-SQL](#card_file_box-no-sql)
-  * [H-base](#h-base)
-
-  * [Mondodb](#mongodb)
-
-  * [Neo4j](#neo4j)
-
-+ [Spark](#magic_wand-spark)
-
-  * [Spark y Scala](#spark-y-scala)
-
-  * [Kafka](#kafka)
-
-  * [Comparativa Datasets y Dataframe en Scala](#comparativa-datasets-y-dataframe-en-scala)
-
-* [Carga Incremental con Spark](#hourglass-carga-incremental-con-spark)
-
-* [Herramientas de Orquestación de flujo de datos](#abacus-herramientas-de-orquestación-de-flujo-de-datos)
-
-* [Participantes y compañeros del pair programming](#people_hugging-participantes-y-compañeros-del-pair-programming)
+* [Video](#video)
 
 <br>
 
@@ -203,4 +184,10 @@ Para el deploy de la API se decidió crear un nuevo repositorio [repo_render](ht
 ## Video
 
 En este [video](https://www.youtube.com/watch?v=MWNqfuX1hUQ) se explica brevemente este proyecto mostrando el funcionamiento de la API en render y en fastApi local.
+
+<br>
+
+* **`Sebastian Vazquez`**..................   [![linkedin](https://img.shields.io/badge/linkedin-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sebastian-vazquez-67353722b/)
+
+
 
